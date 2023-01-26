@@ -1,1 +1,152 @@
-@import '~bootstrap/scss/bootstrap'
+@use 'partials/variables' as *;
+@import '~bootstrap/scss/bootstrap';
+
+header{
+    text-transform: uppercase;
+}
+
+.blue_nav{
+    background-color: $secondary_color;
+
+    a{
+        color: $accent_color_light;
+        text-decoration: none;
+    }
+}
+
+.white_nav{
+    background-color: $accent_color_light;
+
+    a{
+        text-decoration: none;
+        color: $primary_color;
+
+        &.active{
+            color: $secondary_color;
+            border-bottom: 3px solid $secondary_color;
+        }
+    }
+
+    .logo_container{
+        width: 60px;
+    }
+}
+
+.jumbo{
+    height: 300px;
+    overflow: hidden;
+}
+
+.main_section{
+    background-color: $primary_color;
+
+    h3{
+        color: $accent_color_light;
+        background-color: $secondary_color;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: .5rem;
+        transform: translateY(-80%);
+    }
+    
+    a{
+        text-decoration: none;
+    }
+}
+
+.card_comic{
+
+    .card_thumb{
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .card_title{
+        text-transform: uppercase;
+        color: $accent_color_light;
+        text-decoration: none;
+    }
+}
+
+.divider{
+    background-color: $secondary_color;
+    position: relative;
+
+    .comic_img{
+        position: absolute;
+        bottom: 20%;
+    }
+}
+
+.comic_desc{
+    h4{
+        text-transform: uppercase;
+        color: $secondary_color_dark;
+        font-weight: bold;
+    }
+
+    p{
+        color: $footer_color;
+    }
+}
+
+.green_banner{
+    background-color: $comic_banner_dark;
+    color: $comic_banner_light;
+    border-bottom: 1px solid $accent_color_dark;
+
+    .price{
+        border-right: 1px solid $accent_color_dark;
+        padding: .7rem 1rem;
+    }
+
+    span:first-of-type, button{
+        color:$accent_color_light;
+    }
+
+    button{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.ad_title{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: end;
+    color: $footer_color;
+}
+
+.primary_footer{
+    background-image: url('../images/footer-bg.jpg');
+    height: 400px;
+
+    h4{
+        text-transform: uppercase;
+        color: $accent_color_light;
+    }
+
+    a{
+        text-decoration: none;
+        color: $accent_color_dark;
+    }
+
+    .logo_container{
+        width: 400px;
+    }
+}
+
+.secondary_footer{
+    background-color: $footer_color;
+
+    span{
+        color: $secondary_color;
+    }
+    
+    ul{
+        margin-bottom: 0;
+    }
+}
