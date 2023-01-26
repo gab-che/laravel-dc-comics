@@ -3,7 +3,10 @@
 @section('main')
     <div class="main_section py-3">
         <div class="container">
-            <h3>current series</h3>
+            <div class="d-flex justify-content-between">
+                <h3 class="blue_velvet">current series</h3>
+                <a href="{{route('comics.create')}}" class="btn blue_velvet d-flex align-items-center">add comic</a>
+            </div>
             <div class="row row-cols-6">
                 @foreach ($comics as $comic)
                     <div class="col">

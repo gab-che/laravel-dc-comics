@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Date;
 
 class ComicController extends Controller
 {
@@ -38,7 +39,15 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
-        // inserire nuova riga nel db coi dati del form
+        $comic = new Comic;
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->thumb = 'no-img-found';
+        $comic->price = (float)$data['price'];
+        $comic->series = $data['series'];
+        $comic->sale_date = '2022-02-02';
+        $comic->type = 'comic book';
+        $comic->save();
 
         return redirect()->route('comics.index');
     }
