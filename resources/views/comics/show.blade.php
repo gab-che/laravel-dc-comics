@@ -25,3 +25,7 @@
 @section('comic_description')
     {{$comic->description}}
 @endsection
+
+@section('edit_link')
+    {{route('comics.edit', $comic->id)}}
+@endsection
