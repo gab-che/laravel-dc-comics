@@ -38,7 +38,7 @@
                 <div class="col-4">
                     <div class="buttons d-flex justify-content-around py-4">
                         <a href="@yield('edit_link')" class="btn btn-outline-primary">Edit</a>
-                        <a href="#" class="btn btn-outline-danger">Delete</a>
+                        <a href="@yield('delete_link')" class="btn btn-outline-danger">Delete</a>
                     </div>
                     <div class="ad">
                         <div class="ad_title">advertisement</div>
