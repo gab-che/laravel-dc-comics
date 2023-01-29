@@ -38,8 +38,26 @@
                 <div class="col-4">
                     <div class="buttons d-flex justify-content-around py-4">
                         <a href="@yield('edit_link')" class="btn btn-outline-primary">Edit</a>
-                        <a href="@yield('delete_link')" class="btn btn-outline-danger">Delete</a>
+
+                        <form action="@yield('delete_link')" method="POST" id="delete_form">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-outline-danger">Delete</button>
+                        </form>
                     </div>
+
+                        {{-- js --}}
+                        <script>
+                            const deleteForm = document.querySelector('#delete_form');
+                            deleteForm.addEventListener('submit', function(e){
+                                e.preventDefault();
+
+                                const userConfirm = confirm('Delete will be permanent. Confirm action?')
+                                if(userConfirm){
+                                    deleteForm.submit();
+                                }
+                            })
+                        </script>
                     <div class="ad">
                         <div class="ad_title">advertisement</div>
                         <div class="ad_img">

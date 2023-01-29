@@ -31,5 +31,5 @@
 @endsection
 
 @section('delete_link')
-    {{route('comics.edit', $comic->id)}}
+    {{route('comics.destroy', $comic->id)}}
 @endsection

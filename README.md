@@ -1,9 +1,12 @@
 ## TO-DO
 
--   edit - update;
--   delete;
+~~- edit - update;~~
+
+~~- delete;~~
+
 -   layout form (?);
--   js per bottoni;
+
+~~- js per bottoni;~~
 
 ### CODE REFACTORING
 
