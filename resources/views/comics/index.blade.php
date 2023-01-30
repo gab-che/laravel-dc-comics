@@ -20,3 +20,7 @@
         </div>
     </div>
 @endsection
+
+@if(session('delete'))
+    @include('partials.toast')
+@endif

@@ -49,7 +49,7 @@ class ComicController extends Controller
         $comic->type = 'comic book';
         $comic->save();
 
-        return redirect()->route('comics.show', [$comic])->with('status', 'Comic added successfully!');
+        return redirect()->route('comics.show', [$comic])->with('add', 'Comic added successfully!');
     }
 
     /**
@@ -85,7 +85,7 @@ class ComicController extends Controller
     {
         $data = $request->all();
         $comic->update($data);
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()->route('comics.show', $comic->id)->with('update', 'Comic updated successfully!');
     }
 
     /**
@@ -97,6 +97,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete($comic);
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('delete', 'Comic deleted successfully!');
     }
 }
