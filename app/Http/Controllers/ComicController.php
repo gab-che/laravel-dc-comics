@@ -49,7 +49,7 @@ class ComicController extends Controller
         $comic->type = 'comic book';
         $comic->save();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.show', [$comic])->with('status', 'Comic added successfully!');
     }
 
     /**

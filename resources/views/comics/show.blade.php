@@ -33,3 +33,11 @@
 @section('delete_link')
     {{route('comics.destroy', $comic->id)}}
 @endsection
+
+{{-- @include('partials.toast') --}}
+
+@if(session('status'))
+    <div class="alert alert-success">
+        {{session('status')}}
+    </div>
+@endif
