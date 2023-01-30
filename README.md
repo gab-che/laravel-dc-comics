@@ -6,7 +6,8 @@
 
 ~~- js per bottoni;~~
 
--   toast dopo store e delete;
+~~- toast dopo store e delete;~~
+
 -   csv in php?
 -   trasformare csv in array?
 -   seeder legge array, crea istanze di Comic, salva in db;
