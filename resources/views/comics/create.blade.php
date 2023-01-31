@@ -20,36 +20,57 @@
                 <form action="{{route('comics.store')}}" method="POST">
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label">Title</label>
-                        <input type="text" class="form-control" name="title" value="{{old('title')}}">
+                        @include('partials.input_form', [
+                            'input_name' => 'text',
+                            'label' => 'Title',
+                            'type' => 'text'
+                        ])
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Description</label>
-                        <textarea type="text" class="form-control" name="description">{{old('title')}}</textarea>
+                        @include('partials.input_form', [
+                            'input_name' => 'description',
+                            'label' => 'Description',
+                            'type' => 'textarea'
+                        ])
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            <label class="form-label">Price</label>
-                            <input type="number" step="0.1" class="form-control" name="price" value="{{old('price')}}">
+                            @include('partials.input_form', [
+                            'input_name' => 'price',
+                            'label' => 'Price',
+                            'type' => 'number'
+                        ])
                         </div>
                         <div class="col">
-                            <label class="form-label">Series</label>
-                            <input type="text" class="form-control" name="series" value="{{old('series')}}">
+                            @include('partials.input_form', [
+                            'input_name' => 'series',
+                            'label' => 'Series',
+                            'type' => 'text'
+                        ])
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Img Url</label>
-                        <input type="text" class="form-control" name="thumb" value="{{old('thumb')}}">
+                        @include('partials.input_form', [
+                            'input_name' => 'thumb',
+                            'label' => 'Img Url',
+                            'type' => 'text'
+                        ])
                     </div>
 
                     <div class="row mb-3">
                         <div class="col">
-                            <label class="form-label">Sale date</label>
-                            <input type="date" class="form-control" name="sale_date" value="{{old('sale_date')}}">
+                            @include('partials.input_form', [
+                            'input_name' => 'sale_date',
+                            'label' => 'Sale date',
+                            'type' => 'date'
+                        ])
                         </div>
                         <div class="col">
-                            <label class="form-label">Type</label>
-                            <input type="text" class="form-control" name="type" placeholder="graphic novel, comic book..." value="{{old('type')}}">
+                            @include('partials.input_form', [
+                            'input_name' => 'type',
+                            'label' => 'Type',
+                            'type' => 'text'
+                        ])
                         </div>
                     </div>
                     

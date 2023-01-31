@@ -42,16 +42,6 @@ class ComicController extends Controller
         $data = $request->validated();
         $comic = Comic::create($data);
 
-        // $comic = new Comic;
-        // $comic->title = $data['title'];
-        // $comic->description = $data['description'];
-        // $comic->thumb = $data['thumb'];
-        // $comic->price = (float)$data['price'];
-        // $comic->series = $data['series'];
-        // $comic->sale_date = date('Y-m-d', strtotime($data['sale_date']));
-        // $comic->type = $data['type'];
-        // $comic->save();
-
         return redirect()->route('comics.show', [$comic])->with('add', 'Comic added successfully!');
     }
 
