@@ -13,15 +13,32 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Description</label>
-                        <input type="text" class="form-control" name="description">
+                        <textarea type="text" class="form-control" name="description"></textarea>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label">Price</label>
+                            <input type="number" step="0.1" class="form-control" name="price">
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Series</label>
+                            <input type="text" class="form-control" name="series">
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Price</label>
-                        <input type="number" step="0.1" class="form-control" name="price">
+                        <label class="form-label">Img Url</label>
+                        <input type="text" class="form-control" name="thumb">
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Series</label>
-                        <input type="text" class="form-control" name="series">
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label">Sale date</label>
+                            <input type="text" class="form-control" name="sale_date">
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Type</label>
+                            <input type="text" class="form-control" name="type" placeholder="graphic novel, comic book...">
+                        </div>
                     </div>
                     
                     <button class="btn btn-outline-primary" type="submit">Save comic</button>

@@ -42,11 +42,11 @@ class ComicController extends Controller
         $comic = new Comic;
         $comic->title = $data['title'];
         $comic->description = $data['description'];
-        $comic->thumb = 'no-img-found';
+        $comic->thumb = $data['thumb'];
         $comic->price = (float)$data['price'];
         $comic->series = $data['series'];
-        $comic->sale_date = '2022-02-02';
-        $comic->type = 'comic book';
+        $comic->sale_date = date('Y-m-d', strtotime($data['sale_date']));
+        $comic->type = $data['type'];
         $comic->save();
 
         return redirect()->route('comics.show', [$comic])->with('add', 'Comic added successfully!');
