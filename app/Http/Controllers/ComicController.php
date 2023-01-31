@@ -26,9 +26,9 @@ class ComicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Comic $comic)
     {
-        return view('comics.create');
+        return view('comics.create', compact('comic'));
     }
 
     /**

@@ -23,14 +23,16 @@
                         @include('partials.input_form', [
                             'input_name' => 'text',
                             'label' => 'Title',
-                            'type' => 'text'
+                            'type' => 'text',
+                            'old_value' => $comic->title
                         ])
                     </div>
                     <div class="mb-3">
                         @include('partials.input_form', [
                             'input_name' => 'description',
                             'label' => 'Description',
-                            'type' => 'textarea'
+                            'type' => 'textarea',
+                            'old_value' => $comic->description
                         ])
                     </div>
                     <div class="row mb-3">
@@ -38,14 +40,16 @@
                             @include('partials.input_form', [
                             'input_name' => 'price',
                             'label' => 'Price',
-                            'type' => 'number'
+                            'type' => 'number',
+                            'old_value' => $comic->price
                         ])
                         </div>
                         <div class="col">
                             @include('partials.input_form', [
                             'input_name' => 'series',
                             'label' => 'Series',
-                            'type' => 'text'
+                            'type' => 'text',
+                            'old_value' => $comic->series
                         ])
                         </div>
                     </div>
@@ -53,7 +57,8 @@
                         @include('partials.input_form', [
                             'input_name' => 'thumb',
                             'label' => 'Img Url',
-                            'type' => 'text'
+                            'type' => 'text',
+                            'old_value' => $comic->thumb
                         ])
                     </div>
 
@@ -62,14 +67,16 @@
                             @include('partials.input_form', [
                             'input_name' => 'sale_date',
                             'label' => 'Sale date',
-                            'type' => 'date'
+                            'type' => 'date',
+                            'old_value' => $comic->sale_date
                         ])
                         </div>
                         <div class="col">
                             @include('partials.input_form', [
                             'input_name' => 'type',
                             'label' => 'Type',
-                            'type' => 'text'
+                            'type' => 'text',
+                            'old_value' => $comic->type
                         ])
                         </div>
                     </div>

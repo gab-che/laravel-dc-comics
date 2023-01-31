@@ -9,20 +9,65 @@
                     @csrf
                     @method('put')
                     <div class="mb-3">
-                        <label class="form-label">Title</label>
-                        <input type="text" class="form-control" name="title" value="{{$comic->title}}">
+                        @include('partials.input_form', [
+                            'input_name' => 'text',
+                            'label' => 'Title',
+                            'type' => 'text',
+                            'old_value' => $comic->title
+                        ])
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Description</label>
-                        <textarea type="text" class="form-control" name="description">{{$comic->description}}</textarea>
+                        @include('partials.input_form', [
+                            'input_name' => 'description',
+                            'label' => 'Description',
+                            'type' => 'textarea',
+                            'old_value' => $comic->description
+                        ])
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            @include('partials.input_form', [
+                            'input_name' => 'price',
+                            'label' => 'Price',
+                            'type' => 'number',
+                            'old_value' => $comic->price
+                        ])
+                        </div>
+                        <div class="col">
+                            @include('partials.input_form', [
+                            'input_name' => 'series',
+                            'label' => 'Series',
+                            'type' => 'text',
+                            'old_value' => $comic->series
+                        ])
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Price</label>
-                        <input type="number" step="0.1" class="form-control" name="price" value="{{$comic->price}}">
+                        @include('partials.input_form', [
+                            'input_name' => 'thumb',
+                            'label' => 'Img Url',
+                            'type' => 'text',
+                            'old_value' => $comic->thumb
+                        ])
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Series</label>
-                        <input type="text" class="form-control" name="series" value="{{$comic->series}}">
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            @include('partials.input_form', [
+                            'input_name' => 'sale_date',
+                            'label' => 'Sale date',
+                            'type' => 'date',
+                            'old_value' => $comic->sale_date
+                        ])
+                        </div>
+                        <div class="col">
+                            @include('partials.input_form', [
+                            'input_name' => 'type',
+                            'label' => 'Type',
+                            'type' => 'text',
+                            'old_value' => $comic->type
+                        ])
+                        </div>
                     </div>
                     
                     <button class="btn btn-outline-primary" type="submit">Update comic</button>
