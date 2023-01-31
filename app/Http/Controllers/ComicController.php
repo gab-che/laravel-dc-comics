@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\StoreComicRequest;
 use App\Models\Comic;
 use Illuminate\Support\Facades\Date;
 
@@ -35,19 +37,20 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
+        $comic = Comic::create($data);
 
-        $comic = new Comic;
-        $comic->title = $data['title'];
-        $comic->description = $data['description'];
-        $comic->thumb = $data['thumb'];
-        $comic->price = (float)$data['price'];
-        $comic->series = $data['series'];
-        $comic->sale_date = date('Y-m-d', strtotime($data['sale_date']));
-        $comic->type = $data['type'];
-        $comic->save();
+        // $comic = new Comic;
+        // $comic->title = $data['title'];
+        // $comic->description = $data['description'];
+        // $comic->thumb = $data['thumb'];
+        // $comic->price = (float)$data['price'];
+        // $comic->series = $data['series'];
+        // $comic->sale_date = date('Y-m-d', strtotime($data['sale_date']));
+        // $comic->type = $data['type'];
+        // $comic->save();
 
         return redirect()->route('comics.show', [$comic])->with('add', 'Comic added successfully!');
     }

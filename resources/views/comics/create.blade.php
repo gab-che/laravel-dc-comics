@@ -2,6 +2,18 @@
 
 @section('main')
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+        I dati inseriti non sono validi:
+
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        </div>
+    @endif
+
     <div class="container">
         <div class="row py-4">
             <div class="col-md-6 m-auto">
@@ -33,7 +45,7 @@
                     <div class="row mb-3">
                         <div class="col">
                             <label class="form-label">Sale date</label>
-                            <input type="text" class="form-control" name="sale_date">
+                            <input type="date" class="form-control" name="sale_date">
                         </div>
                         <div class="col">
                             <label class="form-label">Type</label>

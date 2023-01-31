@@ -1,6 +1,7 @@
 ## TO-DO
 
--   aggiungere input a form;
+~~- aggiungere input a form;~~
+
 -   Request;
 -   errori in ita;
 
