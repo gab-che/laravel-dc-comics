@@ -10,7 +10,7 @@
                     @method('put')
                     <div class="mb-3">
                         @include('partials.input_form', [
-                            'input_name' => 'text',
+                            'input_name' => 'title',
                             'label' => 'Title',
                             'type' => 'text',
                             'old_value' => $comic->title
